@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --Cyan: #2ab2af;
+  --BrightYellow: #c0df34;
+
+  --LightGray: #e5eff5;
+  --GrayishBlue: #98a6bd;
+
+  --bg1: #2ab2af;
+  --bg2: #49bebd;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--LightGray);
+  height: 100vh;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: var(--Cyan);
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: #f2f2f2;
+}
+
+h1,
+h2 {
+  margin-bottom: 15px;
+}
+
+/* Card */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "top top";
+  margin: auto;
+  max-width: 90%;
+  filter: drop-shadow(0px 5px 10px #cec4c49d);
+}
+
+main > div {
+  padding: 40px;
+}
+
+/* Top side */
+
+.top {
+  grid-area: top;
+  background-color: #fafafa;
+  border-radius: 10px 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.top div h3 {
+  color: var(--BrightYellow);
+  margin-bottom: 7.5px;
+}
+
+.top div p {
+  line-height: 1.5rem;
+  color: var(--GrayishBlue);
+}
+
+/* Left side */
+
+.left {
+  background-color: var(--bg1);
+  color: #ffffff;
+  border-radius: 0 0 0 8px;
+}
+
+.subscription {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.subscription span:first-of-type {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subscription span:last-of-type {
+  opacity: 0.5;
+}
+
+button {
+  width: 100%;
+  margin-top: 30px;
+  color: #ffffff;
+  background-color: var(--BrightYellow);
+  font-size: 1.1rem;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  box-shadow: 3px 5px 10px #18181859;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Right side */
+
+.right {
+  background-color: var(--bg2);
+  border-radius: 0 0 8px 0;
+}
+
+.right ul {
+  list-style: none;
+  color: #ffffff;
+  opacity: 0.7;
+}
