@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
 :root {
-  --Cyan: #2ab2af;
   --BrightYellow: #c0df34;
 
   --LightGray: #e5eff5;
@@ -24,11 +23,12 @@ body {
   flex-direction: column;
   background-color: var(--LightGray);
   height: 100vh;
+  gap: 25px;
 }
 
 h1 {
   font-size: 1.5rem;
-  color: var(--Cyan);
+  color: var(--bg1);
 }
 
 h2 {
@@ -41,6 +41,11 @@ h2 {
   margin-bottom: 15px;
 }
 
+h3 {
+  color: var(--BrightYellow);
+  margin-bottom: 7.5px;
+  font-size: 1rem;
+}
 /* Card */
 
 main {
@@ -61,16 +66,11 @@ main > div {
 .top {
   grid-area: top;
   background-color: #fafafa;
-  border-radius: 10px 0;
   border-radius: 8px 8px 0 0;
 }
 
-.top div h3 {
-  color: var(--BrightYellow);
-  margin-bottom: 7.5px;
-}
-
 .top div p {
+  max-width: 550px;
   line-height: 1.5rem;
   color: var(--GrayishBlue);
 }
@@ -123,5 +123,33 @@ button {
 .right ul {
   list-style: none;
   color: #ffffff;
-  opacity: 0.7;
+  opacity: 0.5;
+}
+
+footer {
+  background-color: #293c4e;
+  width: 100vw;
+  text-align: center;
+  padding: 15px;
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+}
+
+@media (max-width: 708px) {
+  body {
+    padding-top: 50px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "top";
+  }
+  .left {
+    border-radius: 0px;
+  }
+  .right {
+    border-radius: 0 0 8px 8px;
+  }
 }
